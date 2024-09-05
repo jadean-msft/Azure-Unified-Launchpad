@@ -1,0 +1,295 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/0.1.2-preview/CreateUIDefinition.MultiVm.json#",
+    "handler": "Microsoft.Azure.CreateUIDef",
+    "version": "0.1.2-preview",
+    "parameters": {
+        "resourceTypes": [
+            "microsoft.resources/resourcegroups"
+        ],
+        "basics": [
+            {
+                "name": "communityName",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Community Name",
+                "subLabel": "",
+                "defaultValue": "",
+                "toolTip": "",
+                "constraints": {
+                    "required": true,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "enclaveName",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Enclave Name",
+                "subLabel": "",
+                "defaultValue": "",
+                "toolTip": "",
+                "constraints": {
+                    "required": true,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "endpointName",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Endpoint Name",
+                "subLabel": "",
+                "defaultValue": "",
+                "toolTip": "",
+                "constraints": {
+                    "required": true,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "addressSpace",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Address Space",
+                "subLabel": "",
+                "defaultValue": "10.0.0.0/8",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "dnsServers",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Dns Servers",
+                "subLabel": "",
+                "defaultValue": "[[]",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "networkSize",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Network Size",
+                "subLabel": "",
+                "defaultValue": "small",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "customCidrRange",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Custom Cidr Range",
+                "subLabel": "",
+                "defaultValue": "",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "numberOfEnclaves",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Number Of Enclaves",
+                "subLabel": "",
+                "defaultValue": "2",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "stage",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Stage",
+                "subLabel": "",
+                "defaultValue": "6",
+                "toolTip": "determines what stage to deploy",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "transitOptionType",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Transit Option Type",
+                "subLabel": "",
+                "defaultValue": "Gateway",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "scaleUnits",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Scale Units",
+                "subLabel": "",
+                "defaultValue": "2",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "transitHubName",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Transit Hub Name",
+                "subLabel": "",
+                "defaultValue": "transit-hub-1",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "remoteVirtualNetworkId",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Remote Virtual Network Id",
+                "subLabel": "",
+                "defaultValue": "",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "location",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Location",
+                "subLabel": "",
+                "defaultValue": "[[resourceGroup().location]",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "connectionNameBase",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Connection Name Base",
+                "subLabel": "",
+                "defaultValue": "[[take(format('a{0}', uniqueString(resourceGroup().id, deployment().name)), 10)]",
+                "toolTip": "",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": "",
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            },
+            {
+                "name": "enableTelemetry",
+                "type": "Microsoft.Common.DropDown",
+                "label": "Enable Telemetry",
+                "subLabel": "",
+                "defaultValue": "true",
+                "toolTip": "Enable/Disable usage telemetry for this template.",
+                "constraints": {
+                    "required": false,
+                    "allowedValues": [
+                        {
+                            "label": "true",
+                            "value": true
+                        },
+                        {
+                            "label": "false",
+                            "value": false
+                        }
+                    ],
+                    "validations": []
+                },
+                "infoMessages": [],
+                "visible": true
+            }
+        ],
+        "steps": [],
+        "outputs": {
+            "communityName": "[basics('communityName')]",
+            "enclaveName": "[basics('enclaveName')]",
+            "endpointName": "[basics('endpointName')]",
+            "addressSpace": "[basics('addressSpace')]",
+            "dnsServers": "[basics('dnsServers')]",
+            "networkSize": "[basics('networkSize')]",
+            "customCidrRange": "[basics('customCidrRange')]",
+            "numberOfEnclaves": "[basics('numberOfEnclaves')]",
+            "stage": "[basics('stage')]",
+            "transitOptionType": "[basics('transitOptionType')]",
+            "scaleUnits": "[basics('scaleUnits')]",
+            "transitHubName": "[basics('transitHubName')]",
+            "remoteVirtualNetworkId": "[basics('remoteVirtualNetworkId')]",
+            "location": "[basics('location')]",
+            "connectionNameBase": "[basics('connectionNameBase')]",
+            "enableTelemetry": "[basics('enableTelemetry')]"
+        }
+    }
+}
